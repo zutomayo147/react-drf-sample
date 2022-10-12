@@ -9,6 +9,8 @@
 - https://www.kthksgy.com/web/make-react-django-blog1/
 - https://www.python-program.tech/?p=7
 
+/componets以下は見なくていい
+
 ## わかるようになること
 
 - cors
