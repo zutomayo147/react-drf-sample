@@ -2,6 +2,8 @@
 
 ## 出来ること
 
+⚠ 最低限の実装で見た目を削ぎ落とすことで逆にコードがわかりやすい気がする
+
 - drf公式チュートリアル(https://www.django-rest-framework.org/topics/documenting-your-api/)のスニペット投稿 
 - swaggerを見てスニペット作成のコードを模倣すればスニペット削除機能などが生える
 
