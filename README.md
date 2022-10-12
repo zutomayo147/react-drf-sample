@@ -1,10 +1,28 @@
-# Novel
+# react-drf-sample
 
-## メモ
+## 出来ること
+
+- drf公式チュートリアル(https://www.django-rest-framework.org/topics/documenting-your-api/)のスニペット投稿 
+- swaggerを見てスニペット作成のコードを模倣すればスニペット削除機能などが生える
+
+- 参考資料
+- https://www.kthksgy.com/web/make-react-django-blog1/
+- https://www.python-program.tech/?p=7
+
+## わかるようになること
+
+- cors
+- cookie
+- docker
+- http(axios)
+- Promise
+- REST API
+
+## メモ (意見募集)
 
 - ログインしているかどうかの判定をアクセストークンの所持の有無だけでいいのか
-- httpOnlyのcookieにアクセストークン(jwt)を保持するのがセキ
-  ュリティ的に良い?
+- jwtを保持するcookieをhttponlyにするとxss対策になるがAPIを叩くときにjwtを保持してAPIをたたけない(サーバー側で管理するしかない🤔
+
 
 ### Built With
 
@@ -83,13 +101,12 @@ sequenceDiagram
 
 ## URL for development
 
-- front  http://localhost:3000/
-- back  http://localhost:8000/
-- swagger http://localhost:8000/api/schema/swagger-ui/
-
-## URL for storyboook
-
-https://github.com/zutomayo147/novel-storybook
+- front  
+http://localhost:3000/
+- back  
+http://localhost:8000/
+- swagger 
+http://localhost:8000/api/schema/swagger-ui/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
