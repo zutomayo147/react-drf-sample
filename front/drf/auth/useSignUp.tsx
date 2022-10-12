@@ -1,7 +1,7 @@
+import axios from 'axios';
 import { useCallback } from "react"
 import { useRouter } from "next/router"
-import axios from 'axios';
-import { drfApiRoot } from 'constants/drf'
+import { drfApiRoot } from "constants/drf"
 
 type userInfo = {
   email: string
@@ -9,10 +9,13 @@ type userInfo = {
   password: string
 }
 
-const useSignUp = () => {
+
+
+export const useSignUp = () => {
   const router = useRouter()
   const signUp = useCallback(async (props: userInfo) => {
-    const { email, password, userName } = props
+    console.log(1)
+    const { email, password, userName } = { ...props }
     await axios
       .post(
         `${drfApiRoot}/auth/users/`,
@@ -29,13 +32,9 @@ const useSignUp = () => {
           }
         }
       ).then((res) => {
-        router.push("/about")
+        router.push("/")
+        alert('created account')
         console.log(res.data)
-      })
-      .catch(err => {
-        console.log(err)
-        alert(err)
-        console.error("failed to create New Account")
       })
       .catch((err) => {
         alert(err)

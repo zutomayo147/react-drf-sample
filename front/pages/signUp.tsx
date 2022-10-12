@@ -46,7 +46,7 @@ const SignUp: NextPage = () => {
           </InputGroup>
           <InputGroup>
             <Input
-              placeholder="パスワード"
+              placeholder="パスワード 英数字8文字以上"
               type={showPassword ? "text" : "password"}
               value={password}
               onChange={onChangePassword}
@@ -71,8 +71,8 @@ const SignUp: NextPage = () => {
   )
 }
 
-// SignUp.getLayout = (page: ReactElement) => {
-//   return page
-// }
+SignUp.getLayout = (page: ReactElement) => {
+  return page
+}
 
 export default SignUp
