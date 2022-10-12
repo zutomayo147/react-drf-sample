@@ -41,12 +41,19 @@ const SignIn: NextPage = () => {
   //   value={linenos}
   //   onChange={onChangeCode}
   // />
+  // <Checkbox
+  //   isChecked={checked}
+  //   // onChange={(e) => setChecked(e.target.checked)}
+  //   onChange={handleCheckboxClick}
+  // >
+  //   linenos
+  // </Checkbox>
 
   return (
     <Flex alignItems="center" justifyContent="center">
       <Box>
         <Heading as="h1" size="lg" textAlign="center">
-        投稿
+          投稿
         </Heading>
         <Divider my={4} />
         <Stack spacing={4} py={4} px={10}>
@@ -57,20 +64,13 @@ const SignIn: NextPage = () => {
               value={code}
               onChange={onChangeCode}
             />
-            <Checkbox
-              isChecked={checked}
-              // onChange={(e) => setChecked(e.target.checked)}
-              onChange={handleCheckboxClick}
-            >
-              Parent Checkbox
-            </Checkbox>
             <Input
-              placeholder="langua"
+              placeholder="python"
               value={language}
               onChange={onChangeLanguage}
             />
             <Input
-              placeholder="style"
+              placeholder="abap"
               value={style}
               onChange={onChangeStyle}
             />
