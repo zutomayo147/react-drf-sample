@@ -5,12 +5,12 @@ volumes:
 
 services:
     front:
-        container_name: front
+        container_name: front-sample
         build:
             context: ./front
             dockerfile: ./Dockerfile
         ports:
-            - 3000:3000
+            - 3003:3003
         environment:
             TZ: Asia/Tokyo
         tty: true
@@ -18,13 +18,13 @@ services:
             - ./front:/front
 
     back:
-        container_name: back
+        container_name: back-sample
         build:
             context: ./back
             dockerfile: ./Dockerfile
-        command: python /back/manage.py runserver 0.0.0.0:8000
+        command: python /back/manage.py runserver 0.0.0.0:8008
         ports:
-            - 8000:8000
+            - 8008:8008
         environment:
             TZ: Asia/Tokyo
         tty: true
@@ -37,7 +37,7 @@ services:
         container_name: postgres
         image: postgres:14.5-alpine
         ports:
-            - 6543:5432
+            - 6541:5432
         environment:
             POSTGRES_USER: dev
             POSTGRES_PASSWORD: passwd

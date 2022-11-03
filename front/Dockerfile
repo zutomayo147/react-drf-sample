@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 # USER me
 
-WORKDIR /front
+WORKDIR /front-samle
 
 # COPY yarn.lock package.json /front/
 

@@ -24,8 +24,25 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
-    "django.contrib.messages", "django.contrib.staticfiles",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        # "rest_framework.authentication.SessionAuthentication",
+        # "rest_framework.authentication.BasicAuthentication"
+        # "rest_framework.authentication.TokenAuthentication",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+}
+
 
 ROOT_URLCONF = "tutorial.urls"
 
@@ -53,21 +70,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
-# REST_FRAMEWORK = {
-#     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
-#     "DEFAULT_PERMISSION_CLASSES": [
-#         "rest_framework.permissions.IsAuthenticated",
-#     ],
-#     "DEFAULT_AUTHENTICATION_CLASSES": (
-#         # "rest_framework.authentication.SessionAuthentication",
-#         # "rest_framework.authentication.BasicAuthentication"
-#         # "rest_framework.authentication.TokenAuthentication",
-#         "rest_framework_simplejwt.authentication.JWTAuthentication",
-#     ),
-#     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-#     "PAGE_SIZE": 10,
-# }
 
 # Configure the JWT settings
 SIMPLE_JWT = {
